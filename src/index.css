@@ -1,13 +1,229 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-8 {
+  max-width: 73%;
+  width: 100%;
+}
+.col-4 {
+  max-width: 22%;
+  width: 100%;
+}
+.logo span {
+  font-weight: 300;
+}
+.forecast-list h3 {
+  margin: 10px 0;
+}
+.list {
+  display: flex;
+  flex-wrap: no-wrap;
+  overflow-x: auto;
+  margin: 20px 0 0;
+}
+.city-item {
+  flex: 0 auto;
+  width: auto;
+  height: 100%;
+  max-width: 200px;
+  margin-right: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.city-item button {
+  width: 200px;
+  height: 200px;
+  border: none;
+}
+.city-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.city-item-text {
+  padding: 10px;
+}
+.city-item-name {
+  margin-bottom: 5px;
+}
+.city-item-date {
+  font-size: 14px;
+  color: gray;
+}
+.side-bar {
+  height: 100vh;
+  background: darkblue;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.side-bar .content-block {
+  height: 250px;
+  color: #fff;
+  text-align: center;
+}
+.side-bar .content-block .side-bar-title {
+  font-size: 14px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.side-bar .content-block .side-bar-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-bar .content-block .side-bar-temp p {
+  font-size: 44px;
+  margin-left: 10px;
+}
+.side-bar .content-block .side-bar-temp img {
+  width: 40px;
+}
+.side-bar .content-block .side-bar-date {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.forecast-list-content {
+  display: flex;
+}
+.forecast-list-item {
+  width: 100px;
+  text-align: center;
+}
+.forecast-list-item-img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+.forecast-list-item-img img {
+  width: 100%;
+}
+.forecast-list-item-content {
+  width: 100px;
+}
+.list-item-title {
+  color: lightgray;
+}
+.list-item-date {
+  color: gray;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 11% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px; /* Максимальна ширина контенту */
+  border-radius: 10px;
+}
+.modal-content-title {
+  display: flex;
+  justify-content: space-between;
+}
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal label {
+  margin-top: 10px;
+  display: block;
+}
+
+.modal select,
+.modal input[type="date"],
+.modal button {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.modal button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}
+.red {
+  color: red;
+}
+
+.search input {
+  margin-top: 5px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: lightgray;
+  color: black;
+}
+.search input::placeholder {
+  color: black;
+}
+.timer {
+  display: flex;
+  justify-content: space-between;
+}
+.timer .count {
+  font-size: 24px;
+  font-weight: bold;
+}
+.timer .timer-title {
+  font-size: 10px;
 }

@@ -1,0 +1,29 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "city": "Berlin",
+      "picture": "./berlin.jpg"
+    },
+    {
+      "id": 2,
+      "city": "Marsel",
+      "picture": "./marsel.jpg"
+    },
+    {
+      "id": 3,
+      "city": "Paris",
+      "picture": "./paris.jpg"
+    },
+    {
+      "id": 4,
+      "city": "Amsterdam",
+      "picture": "./amsterdam.jpg"
+    },
+    {
+      "id": 5,
+      "city": "Chernivtsi",
+      "picture": "./chernivtsi.jpg"
+    }
+  ]
+}
